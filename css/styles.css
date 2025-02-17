@@ -14,3 +14,11 @@
     grid-template-columns: 1fr;
     gap: 10px; Optional: Adds space between rows
   } */
+
+  header { background-color: #869DC7;
+	color: #00005D;
+	font-size: 150%;
+	padding: 10px 10px 10px 155px;
+	background-repeat: no-repeat;
+	/* background-image: url(lightlogo.jpg); */
+}
