@@ -25,7 +25,7 @@ const knots = {
         name: "Figure Eight",
         instructions: "Make a loop with the working end, then wrap it around the standing part and tuck it back through the loop to form an '8' shape. Pull tight.",
         image: "images/figure-eight.jpg",
-        video:"https://www.youtube.com /embed/tFffbkXSgNI",
+        video:"https://www.youtube.com/embed/tFffbkXSgNI",
         usage: "A strong and easy-to-untie knot used in climbing, sailing, and rescue work. It prevents the rope from slipping through a pulley or belay device."
     },
     "reef": {
