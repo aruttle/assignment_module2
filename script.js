@@ -51,6 +51,29 @@ const knots = {
     }
 };
 
+const quizQuestions = [
+    { 
+        question: "Which knot is best for securing a loop?", 
+        answer: "Bowline" 
+    },
+    { 
+        question: "Which knot is commonly used to join two ropes of different sizes?", 
+        answer: "Sheet Bend" 
+    },
+    { 
+        question: "What knot is often used for securing a rope to a cleat?", 
+        answer: "Cleat Hitch" 
+    },
+    { 
+        question: "Which knot forms an '8' shape and is used in climbing?", 
+        answer: "Figure Eight" 
+    },
+    { 
+        question: "Which knot is ideal for temporarily securing a rope to a post?", 
+        answer: "Clove Hitch" 
+    }
+];
+
 
 
 // Selecting elements from the DOM
@@ -80,3 +103,40 @@ function updateKnotDetails() {
 
 // Event listener for dropdown selection change
 knotSelector.addEventListener("change", updateKnotDetails);
+
+//================================================================
+// ----------------------------- Quiz ----------------------------
+// ===============================================================
+
+// Select elements from the DOM for the quiz
+const quizForm = document.getElementById("knot-quiz-form");
+const quizQuestionLabel = quizForm.querySelector("label[for='quiz-answer']");
+const quizInput = document.getElementById("quiz-answer");
+const quizFeedback = document.getElementById("quiz-feedback");
+
+function randomizeQuestions() {
+    quizQuestions.sort(() => Math.random() - 0.5);
+    quizInput.value = ""; // Clear previous input
+    // quizFeedback.textContent = ""; // Clear previous feedback
+}
+
+let currentQuestion = {};
+
+quizForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const userAnswer = quizInput.value;
+    const correctAnswer = quizQuestions[0].answer;
+
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+        quizFeedback.textContent = "Correct! Well done!";
+        quizFeedback.style.color = "green";
+    } else {
+        quizFeedback.textContent = `Incorrect. The correct answer is: ${correctAnswer}`;
+        quizFeedback.style.color = "red";
+    }
+
+    quizInput.value = "";
+    randomizeQuestions();
+    quizQuestionLabel.textContent = quizQuestions[0].question;
+}
+);
