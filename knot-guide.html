@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Tie Sailing Knots</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body id="homebody" class="bg-light">
+
+     <header><div class="container text-center py-5">
+        <h1 class="heading-index">
+            Sailing Knot Guide <br> Step-by-Step 
+        </h1>
+        <img src="./images/knot-icon.png" alt="Sailing Knot Logo" class="logo">
+    </div> </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">Sailing Knots Guide</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#guide">Knot Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="knot-quiz.html">Knot Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- testing! -->
+
+
+    <!-- Knot Guide Section -->
+    <section id="knot-guide-blurb" class="container mt-5 p-4 bg-white shadow rounded text-center">
+        <h2 class="fw-bold">Step-by-Step Guide</h2>
+        <p class="lead">Select one of the fundamental knots from the dropdown menu. 
+            Step-by-step illustrations and videos will guide you through the process</p>
+    </section>
+
+
+       <!-- Knot Guide Section -->
+       <section id="guide" class="container mt-5 p-4 bg-white shadow rounded">
+        <h2 class="text-center text-primary">Select a Knot</h2>
+        <div class="mb-3">
+            <label for="knot-selector" class="form-label">Choose a knot:</label>
+            <select id="knot-selector" class="form-select">
+                <option value="select">Select a knot...</option>
+                <option value="bowline">Bowline</option>
+                <option value="clove-hitch">Clove Hitch</option>
+                <option value="figure-eight">Figure Eight</option>
+                <option value="reef">Reef Knot</option>
+                <option value="cleat-hitch">Cleat Hitch</option>
+                <option value="double-half-hitch">Double Half Hitch</option>
+            </select>
+        </div>
+
+        <div id="knot-instructions" class="text-center">
+            <h3 class="fw-bold"></h3>
+            <p class="lead">Instructions will appear here...</p>
+            <img id="knot-image" src="images/default-image.jpg" alt="Knot Image" class="img-fluid rounded shadow">
+        </div>
+
+        <div id="knot-usage" class="text-center">
+            <!-- <h3 class="fw-bold"></h3> -->
+            <p id="knot-usage-text" class=""></p>
+            <iframe id="knot-video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </section>
+
+         <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Sailing Knot Guide</p>
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@
 
      <header><div class="container text-center py-5">
         <h1 class="heading-index">
-            Sailing Knot Guide 
+            Sailing Knot Guide <br> Quiz
         </h1>
         <img src="./images/knot-icon.png" alt="Sailing Knot Logo" class="logo">
     </div> </header>
@@ -26,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="knot-guide.html">Knot Guide</a></li>
                     <li class="nav-item"><a class="nav-link" href="#quiz">Knot Quiz</a></li>
                 </ul>
@@ -36,28 +36,24 @@
     <!-- testing! -->
 
 
-    <!-- Home Section -->
-    <section id="home" class="container mt-5 p-4 bg-white shadow rounded text-center">
-        <h2 class="fw-bold">Welcome to the Sailing Knot Guide</h2>
-        <p class="lead">Learn how to tie essential sailing knots with interactive guides and quizzes.</p>
+    <!-- Quiz Blurb Section -->
+    <section id="knot-quiz-blurb" class="container mt-5 p-4 bg-white shadow rounded text-center">
+        <h2 class="fw-bold">Test your Knowledge</h2>
+        <p class="lead">You've learned the fundamentals—now it's time to put your skills to the test!  
+            Challenge yourself with our interactive quiz and see how well you know your sailing knots.  
+            Whether you're a beginner or an experienced sailor, this is a great way to reinforce your understanding  
+            and improve your knot-tying confidence.</p>
     </section>
 
-
-    <!-- Why Knots Section -->
-    <section id="intro" class="container mt-5 p-4 bg-white shadow rounded">
-        <h2 class="text-center text-primary">Why Sailing Knots?</h2>
-        <div class="mb-3">
-            <p class="lead">Sailing knots are essential for securing lines and sails on a boat. 
-                They are also used for various other purposes such as climbing, 
-                camping, and fishing. 
-                Learning how to tie sailing knots is an important skill for any sailor or outdoor enthusiast.</p> 
-        </div>
-
-        <div id="common-knot" class="text-center">
-            <h3 class="fw-bold">Common Knots</h3>
-            <p class="lead">Some Knot Blurb</p>
-            <img id="common-knots" src="images/common-knots.jpg" alt="Common Knots" class="img-fluid rounded shadow">
-        </div>
+    <!-- Quiz Section -->
+    <section id="quiz" class="container mt-5 p-4 bg-white shadow rounded">
+        <h2 class="text-center text-primary">Test Your Knowledge</h2>
+        <form id="knot-quiz-form" class="text-center">
+            <label for="quiz-answer" class="form-label">Which knot is best for securing a loop?</label>
+            <input type="text" id="quiz-answer" name="quiz-answer" class="form-control w-50 mx-auto">
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+        <p id="quiz-feedback" class="fw-bold mt-3"></p>
     </section>
 
     <!-- Footer -->
