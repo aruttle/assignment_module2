@@ -114,13 +114,24 @@ const quizQuestionLabel = quizForm.querySelector("label[for='quiz-answer']");
 const quizInput = document.getElementById("quiz-answer");
 const quizFeedback = document.getElementById("quiz-feedback");
 
+let currentQuestionIndex = 0;
+
 function randomizeQuestions() {
     quizQuestions.sort(() => Math.random() - 0.5);
-    quizInput.value = ""; // Clear previous input
-    // quizFeedback.textContent = ""; // Clear previous feedback
-}
+    currentQuestionIndex = 0; // Reset index to start from the first question
+    showNextQuestion();
+ }
 
-let currentQuestion = {};
+ function showNextQuestion() {
+    if (currentQuestionIndex < quizQuestions.length) {
+        quizInput.value = ""; // Clear previous input
+        quizFeedback.textContent = ""; // Clear previous feedback
+        document.getElementById("quiz-question").textContent = quizQuestions[currentQuestionIndex].question;
+        currentQuestionIndex++; // Move to the next question
+    } else {
+        document.getElementById("quiz-question").textContent = "Quiz completed!";
+    }
+}
 
 quizForm.addEventListener("submit", (event) => {
     event.preventDefault();
