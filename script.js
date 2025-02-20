@@ -90,10 +90,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Quiz questions
     const quizQuestions = [
-        { question: "Which knot is best for securing a loop?", answer: "Bowline" },
-        { question: "What knot is often used for securing a rope to a cleat?", answer: "Cleat Hitch" },
-        { question: "Which knot forms an '8' shape and is used in climbing?", answer: "Figure Eight" },
-        { question: "Which knot is ideal for temporarily securing a rope to a post?", answer: "Clove Hitch" }
+        { 
+            question: "Which knot is best for securing a loop?", 
+            answer: "Bowline" 
+        },
+        { 
+            question: "What knot is often used for securing a rope to a cleat?", 
+            answer: "Cleat Hitch" 
+        },
+        { 
+            question: "Which knot forms an '8' shape and is used in climbing?", 
+            answer: "Figure Eight" 
+        },
+        { 
+            question: "Which knot is ideal for temporarily securing a rope to a post?", 
+            answer: "Clove Hitch" 
+        }
     ];
 
     // Shuffle questions
@@ -115,10 +127,14 @@ document.addEventListener("DOMContentLoaded", () => {
             quizFeedback.textContent = ""; 
         } else {
             quizFeedback.textContent = "";
-            if (index < 2){
-                quizQuestionLabel.textContent = "Quiz complete! Need to study more!";}
-                if (index >= 2){
-                    quizQuestionLabel.textContent = "Quiz complete! Good Job!";}
+            if (index <= 2){
+                quizQuestionLabel.textContent = "Quiz complete! Maybe have a look at the Knot Guide again :) !";}
+                if (index === 3) {
+                    quizQuestionLabel.textContent = "Quiz complete! Good Job!";
+                }
+                    else {
+                        quizQuestionLabel.textContent = "Quiz complete! Perfect Score!";
+                    }
             quizForm.style.display = "none"; 
             quizFeedback.textContent = `Your Score is ${index} out of ${questionIndex}`;
         }

@@ -107,7 +107,7 @@ nav.navbar ul li a {
 
 
 @media (max-width: 1024px) {
-    .navbar-nav .nav-link:hover::after {
+    .navbar-nav .nav-link:hover::after { /* Ensures that the ease out line scales correctly */
         width: 20%;
     }
 }
