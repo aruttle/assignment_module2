@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "select": {
             name: "",
             instructions: "Select a knot from the dropdown menu to view instructions.",
-            image: "images/default-image.jpg",
+            image: "images/common-knots.jpg",
             video: "",
             usage: ""
         },
