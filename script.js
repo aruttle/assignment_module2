@@ -127,14 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
             quizFeedback.textContent = ""; 
         } else {
             quizFeedback.textContent = "";
-            if (index <= 2){
-                quizQuestionLabel.textContent = "Quiz complete! Maybe have a look at the Knot Guide again :) !";}
-                if (index === 3) {
-                    quizQuestionLabel.textContent = "Quiz complete! Good Job!";
-                }
-                    else {
-                        quizQuestionLabel.textContent = "Quiz complete! Perfect Score!";
-                    }
+            if (index <= 2) {
+                quizQuestionLabel.textContent = "Quiz complete! Maybe have a look at the Knot Guide again :) !";
+            } else if (index === 3) {
+                quizQuestionLabel.textContent = "Quiz complete! Good Job!";
+            } else {
+                quizQuestionLabel.textContent = "Quiz complete! Perfect Score!";
+            }
             quizForm.style.display = "none"; 
             quizFeedback.textContent = `Your Score is ${index} out of ${questionIndex}`;
         }
