@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //  Knot Guide Functionality
     // ==========================
 
-    // Knot data with names, instructions, and images
+    // Knot data Object with names, instructions, and images
     const knots = {
         "select": {
             name: "",
@@ -137,7 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(index);
             console.log(questionIndex);
             let resultMessage = "";
-            if (index < 2 || index === 2) {
+            // Not using '<=' comparison here as my VScode has an issue with it, more detail in the doc 
+            if (index < 2 || index === 2) { 
                 resultMessage += "Maybe have a look at the Knot Guide again!";
                 
             } else if (index === 3) {
@@ -179,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ====================================
-    //  Form & Local Storage  Functionality
+    // Local Storage  Functionality
     // ====================================
 
     document.getElementById("save-score").addEventListener("click", () => {
@@ -191,9 +192,9 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
     
-        let scores = JSON.parse(localStorage.getItem("quizScores")) || []; /* Get existing scores from local storage or create an empty array*/
+        let scores = JSON.parse(localStorage.getItem("quizScores")) || [];  // Get existing scores from local storage or create an empty array
     
-        scores.push({ name: username, score: score });
+        scores.push({ name: username, score: score,date: new Date().toLocaleString() });
     
         localStorage.setItem("quizScores", JSON.stringify(scores));
     
@@ -201,6 +202,22 @@ document.addEventListener("DOMContentLoaded", () => {
     
         alert("Score saved successfully!");
     });
+
+    function updateLeaderboard() {
+        const leaderboardContainer = document.getElementById("leaderboard");
+        leaderboardContainer.innerHTML = ""; // Clear current list
+    
+        const scores = JSON.parse(localStorage.getItem("quizScores")) || []; // Get stored scores or default to an empty array
+    
+        scores.forEach((entry, index) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${index + 1}. ${entry.name} - ${entry.score} (${entry.date})`;
+            leaderboardContainer.appendChild(listItem);
+        });
+    }
+    
+    // Call this function whenever the leaderboard needs updating
+    updateLeaderboard();
 
 
 });

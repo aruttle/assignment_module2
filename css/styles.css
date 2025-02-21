@@ -125,6 +125,10 @@ nav.navbar ul li a {
     display: none;
 }
 
+#leaderboard-header {
+    padding: 0px;
+    text-align: center;
+}
 
 @media (max-width: 1024px) {
     .navbar-nav .nav-link:hover::after { /* Ensures that the ease out line scales correctly */
