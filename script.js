@@ -209,10 +209,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const leaderboardBody = document.querySelector("#leaderboard tbody");
         leaderboardBody.innerHTML = ""; // Clear existing rows
     
-        const scores = JSON.parse(localStorage.getItem("quizScores")) || [];
+        let scores = JSON.parse(localStorage.getItem("quizScores")) || [];
 
         scores.sort((a, b) => b.score - a.score);
         scores = scores.slice(0, 10);
+        localStorage.setItem("quizScores", JSON.stringify(scores));
     
         scores.forEach((entry, index) => {
             const row = document.createElement("tr");
