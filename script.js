@@ -128,16 +128,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
 
-            document.getElementById("quiz-finish-popup").style.display = "block";
-            document.getElementById("final-score").textContent = `${index} out of ${questionIndex}`;
-           // quizFeedback.textContent = "";
-            // if (index <= 2) {
-            //     resultMessage += "Maybe have a look at the Knot Guide again!";
-            // } else if (index === 3) {
-            //     resultMessage += "Good Job!";
-            // } else {
-            //     resultMessage += "Perfect Score!";
-            // }
+            // document.getElementById("quiz-finish-popup").style.display = "block";
+            // document.getElementById("final-score").textContent = `${index} out of ${questionIndex}`;
+           quizFeedback.textContent = "";
+           console.log(index);
+        console.log(questionIndex);
+           let resultMessage = "";
+            if (index < 2 || index === 2) {
+                resultMessage += "Maybe have a look at the Knot Guide again!";
+                
+            } else if (index === 3) {
+                resultMessage += "Good Job!";
+            } else {
+                resultMessage += "Perfect Score!";
+            }
 
             quizQuestionLabel.textContent = resultMessage;
             quizForm.style.display = "none"; 
@@ -167,8 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             questionIndex++;
-            
-            setTimeout(loadNextQuestion, 1000); 
+            setTimeout(loadNextQuestion, 3000); 
         });
     }
 
