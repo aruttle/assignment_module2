@@ -205,7 +205,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateLeaderboard() {
         const leaderboardContainer = document.getElementById("leaderboard");
+        const leaderboardHeader= document.getElementById("leaderboard-header");
+        
         leaderboardContainer.innerHTML = ""; // Clear current list
+        // leaderboardHeader.textContent = "Leaderboard";
     
         const scores = JSON.parse(localStorage.getItem("quizScores")) || []; // Get stored scores or default to an empty array
     
