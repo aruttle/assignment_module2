@@ -135,9 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 resultMessage += "Perfect Score!";
             }
-            
+
+            quizQuestionLabel.textContent = resultMessage;
             quizForm.style.display = "none"; 
-            quizFeedback.textContent = `Your Score is ${index} out of ${questionIndex}`;
+            
         }
     }
 
