@@ -185,7 +185,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("save-score").addEventListener("click", () => {
         const username = document.getElementById("username").value.trim();
-        const score = document.getElementById("final-score").textContent;
+        // const score = document.getElementById("final-score").textContent;
+        const score = index;
     
         if (username === "") {
             alert("Please enter your name before saving.");

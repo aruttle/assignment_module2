@@ -16,10 +16,12 @@
   } */
 
   header {
-    background-color: #003366; 
+    border-radius: 15px 100px 100px 15px;
+    background-image: linear-gradient(#0d6efd, #384048);
     color: white;
     padding: 0px;
     text-align: center;
+
     
 }
 
@@ -44,6 +46,7 @@ header .container {
 }
 
 .navbar {
+    
     background-color: #fff; 
     padding: 15px 0;
     position: sticky; 
@@ -131,14 +134,40 @@ nav.navbar ul li a {
 }
 
 #leaderboard-container {
-    margin-top: 20px;
+    margin: 20px auto; 
     max-width: 400px;
-    border: 1px solid blue;
+    border: 1px solid #0d6efd;
     border-radius: 8px;
     padding: 10px;
     background: #f9f9f9;
+    text-align: center;
 }
 
+#leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+#leaderboard th, #leaderboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#leaderboard th {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+#leaderboard tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+#leaderboard tr:hover {
+    background-color: #ddd;
+}
 
 
 @media (max-width: 1024px) {
