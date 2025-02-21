@@ -202,6 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("quiz-finish-popup").style.display = "none";
     
         alert("Score saved successfully!");
+        location.reload();
     });
 
     function updateLeaderboard() {

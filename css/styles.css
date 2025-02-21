@@ -16,7 +16,7 @@
   } */
 
   header {
-    border-radius: 15px 100px 100px 15px;
+    /* border-radius: 15px 100px 100px 15px; */
     background-image: linear-gradient(#0d6efd, #384048);
     color: white;
     padding: 0px;
@@ -124,6 +124,40 @@ nav.navbar ul li a {
     flex-direction: column;
     gap: 10px;
 }
+
+.popup-content h2 {
+    margin-bottom: 10px;
+    color: #0d6efd;
+}
+
+.popup-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-content button:hover {
+    background: #0b5ed7;
+}
+
 .hidden {
     display: none;
 }
