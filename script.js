@@ -127,14 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
             quizFeedback.textContent = ""; 
 
         } else {
-            quizFeedback.textContent = "";
-            if (index <= 2) {
-                resultMessage += "Maybe have a look at the Knot Guide again!";
-            } else if (index === 3) {
-                resultMessage += "Good Job!";
-            } else {
-                resultMessage += "Perfect Score!";
-            }
+
+            alert(`Quiz complete! Your score is ${index} out of ${questionIndex}.`);
+           // quizFeedback.textContent = "";
+            // if (index <= 2) {
+            //     resultMessage += "Maybe have a look at the Knot Guide again!";
+            // } else if (index === 3) {
+            //     resultMessage += "Good Job!";
+            // } else {
+            //     resultMessage += "Perfect Score!";
+            // }
 
             quizQuestionLabel.textContent = resultMessage;
             quizForm.style.display = "none"; 
