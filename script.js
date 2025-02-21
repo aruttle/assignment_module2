@@ -116,6 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizQuestionLabel = document.getElementById("quiz-question-label");
     const quizInput = document.getElementById("quiz-answer");
     const quizFeedback = document.getElementById("quiz-feedback");
+    const quizFinishPopUp = document.getElementById("quiz-finish-popup");
+    const finalScorePopUp = document.getElementById("final-score");
     
     let index = 0;
 
@@ -126,14 +128,15 @@ document.addEventListener("DOMContentLoaded", () => {
             quizInput.value = ""; 
             quizFeedback.textContent = ""; 
 
+
         } else {
 
-            // document.getElementById("quiz-finish-popup").style.display = "block";
-            // document.getElementById("final-score").textContent = `${index} out of ${questionIndex}`;
-           quizFeedback.textContent = "";
-           console.log(index);
-        console.log(questionIndex);
-           let resultMessage = "";
+            quizFinishPopUp.style.display = "block";
+            finalScorePopUp.textContent = `${index} out of ${questionIndex}`;
+            quizFeedback.textContent = "";
+            console.log(index);
+            console.log(questionIndex);
+            let resultMessage = "";
             if (index < 2 || index === 2) {
                 resultMessage += "Maybe have a look at the Knot Guide again!";
                 
@@ -171,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             questionIndex++;
-            setTimeout(loadNextQuestion, 3000); 
+            setTimeout(loadNextQuestion, 1500); 
         });
     }
 
@@ -179,7 +182,25 @@ document.addEventListener("DOMContentLoaded", () => {
     //  Form & Local Storage  Functionality
     // ====================================
 
-
+    document.getElementById("save-score").addEventListener("click", () => {
+        const username = document.getElementById("username").value.trim();
+        const score = document.getElementById("final-score").textContent;
+    
+        if (username === "") {
+            alert("Please enter your name before saving.");
+            return;
+        }
+    
+        let scores = JSON.parse(localStorage.getItem("quizScores")) || []; /* Get existing scores from local storage or create an empty array*/
+    
+        scores.push({ name: username, score: score });
+    
+        localStorage.setItem("quizScores", JSON.stringify(scores));
+    
+        document.getElementById("quiz-finish-popup").style.display = "none";
+    
+        alert("Score saved successfully!");
+    });
 
 
 });
