@@ -210,6 +210,8 @@ document.addEventListener("DOMContentLoaded", () => {
         leaderboardBody.innerHTML = ""; // Clear existing rows
     
         const scores = JSON.parse(localStorage.getItem("quizScores")) || [];
+
+        scores.sort((a, b) => b.score - a.score);
     
         scores.forEach((entry, index) => {
             const row = document.createElement("tr");
