@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             quizFeedback.textContent = "";
             if (index <= 2) {
-                quizQuestionLabel.textContent = "Quiz complete! Maybe have a look at the Knot Guide again :) !";
+                quizQuestionLabel.textContent = "Quiz complete! Maybe have a look at the Knot Guide again!";
             } else if (index === 3) {
                 quizQuestionLabel.textContent = "Quiz complete! Good Job!";
             } else {
@@ -165,4 +165,12 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(loadNextQuestion, 1000); 
         });
     }
+
+    // ====================================
+    //  Form & Local Storage  Functionality
+    // ====================================
+
+
+    
+
 });
