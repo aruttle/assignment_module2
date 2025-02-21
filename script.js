@@ -128,7 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
 
-            alert(`Quiz complete! Your score is ${index} out of ${questionIndex}.`);
+            document.getElementById("quiz-finish-popup").style.display = "block";
+            document.getElementById("final-score").textContent = `${index} out of ${questionIndex}`;
            // quizFeedback.textContent = "";
             // if (index <= 2) {
             //     resultMessage += "Maybe have a look at the Knot Guide again!";
