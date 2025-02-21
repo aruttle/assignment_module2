@@ -125,15 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
             quizQuestionLabel.textContent = shuffledQuestions[questionIndex].question;
             quizInput.value = ""; 
             quizFeedback.textContent = ""; 
+
         } else {
             quizFeedback.textContent = "";
             if (index <= 2) {
-                quizQuestionLabel.textContent = "Quiz complete! Maybe have a look at the Knot Guide again!";
+                resultMessage += "Maybe have a look at the Knot Guide again!";
             } else if (index === 3) {
-                quizQuestionLabel.textContent = "Quiz complete! Good Job!";
+                resultMessage += "Good Job!";
             } else {
-                quizQuestionLabel.textContent = "Quiz complete! Perfect Score!";
+                resultMessage += "Perfect Score!";
             }
+            
             quizForm.style.display = "none"; 
             quizFeedback.textContent = `Your Score is ${index} out of ${questionIndex}`;
         }
@@ -171,6 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // ====================================
 
 
-    
+
 
 });
