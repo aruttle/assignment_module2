@@ -204,22 +204,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function updateLeaderboard() {
-        const leaderboardContainer = document.getElementById("leaderboard");
-        const leaderboardHeader= document.getElementById("leaderboard-header");
-        
-        leaderboardContainer.innerHTML = ""; // Clear current list
-        // leaderboardHeader.textContent = "Leaderboard";
+        const leaderboardBody = document.querySelector("#leaderboard tbody");
+        leaderboardBody.innerHTML = ""; // Clear existing rows
     
-        const scores = JSON.parse(localStorage.getItem("quizScores")) || []; // Get stored scores or default to an empty array
+        const scores = JSON.parse(localStorage.getItem("quizScores")) || [];
     
         scores.forEach((entry, index) => {
-            const listItem = document.createElement("li");
-            listItem.textContent = `${index + 1}. ${entry.name} - ${entry.score} (${entry.date})`;
-            leaderboardContainer.appendChild(listItem);
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${entry.name}</td>
+                <td>${entry.score}</td>
+                <td>${entry.date}</td>
+            `;
+            leaderboardBody.appendChild(row);
         });
     }
     
-    // Call this function whenever the leaderboard needs updating
+   
     updateLeaderboard();
 
 

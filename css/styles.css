@@ -130,6 +130,17 @@ nav.navbar ul li a {
     text-align: center;
 }
 
+#leaderboard-container {
+    margin-top: 20px;
+    max-width: 400px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+
+
 @media (max-width: 1024px) {
     .navbar-nav .nav-link:hover::after { /* Ensures that the ease out line scales correctly */
         width: 20%;
