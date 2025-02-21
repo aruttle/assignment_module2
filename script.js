@@ -212,6 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const scores = JSON.parse(localStorage.getItem("quizScores")) || [];
 
         scores.sort((a, b) => b.score - a.score);
+        scores = scores.slice(0, 10);
     
         scores.forEach((entry, index) => {
             const row = document.createElement("tr");
