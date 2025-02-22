@@ -56,29 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Swiper js for carousel
-    
-        console.log("DOM fully loaded"); // Debugging check
-    
-        // Initialize Swiper
-        new Swiper(".mySwiper", {
-            loop: true,
-            spaceBetween: 20,
-            slidesPerView: 1,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    
-    
-    
-    
-    
 
     // Selecting elements from the DOM
     const knotSelector = document.getElementById("knot-selector");
