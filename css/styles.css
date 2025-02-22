@@ -231,13 +231,39 @@ section {
     background-color: #ddd;
 }
 
+.swiper-container {
+    width: 100%; 
+    height: auto;
+}
+
+.swiper-slide img {
+    width: 60%; 
+    height: auto; 
+    object-fit: cover; 
+}
 
 @media (max-width: 1024px) {
     .navbar-nav .nav-link:hover::after { /* Ensures that the ease out line scales correctly */
         width: 20%;
 
-        height: 200px; 
-        max-width: 90%; 
+        #knot-video {
+            height: 200px; 
+            max-width: 90%;
+        }
+
+        .swiper-container {
+            height: 300px; /* Adjust height on smaller screens */
+        }
     }
 }
 
+@media (max-width: 768px) {
+    .swiper-container {
+        height: 250px; /* Adjust height further on smaller screens */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+    }
+}
