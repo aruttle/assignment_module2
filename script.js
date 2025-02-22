@@ -57,14 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Swiper js for carousel
-    document.addEventListener("DOMContentLoaded", function () {
-        var swiper = new Swiper(".mySwiper", {
+    
+        console.log("DOM fully loaded"); // Debugging check
+    
+        // Initialize Swiper
+        new Swiper(".mySwiper", {
             loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            speed: 800,
+            spaceBetween: 20,
+            slidesPerView: 1,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 prevEl: ".swiper-button-prev",
             },
         });
-    });
+    
     
     
     
