@@ -232,4 +232,5 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLeaderboard();
 
 
+  
 });
